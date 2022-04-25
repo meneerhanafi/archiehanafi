@@ -23,7 +23,7 @@ body{
     width:20px;
 }
 .home{
-    padding:25px;
+    padding:0 25px;
     height:100vh;
     display: grid;
     place-content: center;
@@ -33,6 +33,7 @@ body{
     background-position: absolute;
     gap:50px;
     overflow:hidden;
+    border: 1px solid;
 }
 nav {
     font-family: 'Poiret One', cursive;
