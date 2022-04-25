@@ -8,7 +8,7 @@
 html{
     padding:0;
     margin:0;
-    background-color: rgba(48, 45, 25, 0.216);
+    background-color: rgb(55, 54, 46);
 }
 body{
     display:grid;
@@ -31,8 +31,9 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     z-index:-1;
-    animation:slidein 1s ease-in;
+    animation:slidein 750ms cubic-bezier(.5, 0, .5, 1);;
     animation-fill-mode: both;
+
 }
 @keyframes slidein {
     from{opacity:0;
@@ -49,7 +50,7 @@ body{
     margin-right: -50%;
     text-align: center;
     animation: fadesocialmedia 2s;
-    animation-delay: 1.5s;
+    animation-delay: 1s;
     animation-fill-mode: both;
 }
 @keyframes fadesocialmedia {
@@ -64,7 +65,7 @@ body{
 
 .content{
     animation: fadecontent 2s;
-    animation-delay: 1s;
+    animation-delay: 0.75s;
     animation-fill-mode: both;
 }
 @keyframes fadecontent {
@@ -84,6 +85,7 @@ nav {
     display:grid;
     text-align: center;
     margin:32px 0;
+    padding:0 20px;
 
 }
 nav a:hover{
