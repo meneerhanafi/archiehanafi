@@ -22,23 +22,28 @@ body{
     width:20px;
 }
 .home{
-    padding:32px;
+    padding:25px;
     height:100vh;
     display: grid;
     place-content: center;
     background-image: url('bg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+    gap:50px;
 }
 nav {
     font-family: 'Poiret One', cursive;
     font-size:60px;
-    border:1px solid rgba(48, 45, 25, 0.197);
-
+    padding:0 20px;
+    display:grid;
+    align-items: center;
+    text-align: center;
 }
 ul{
-
-    padding:50px 30px;
+    padding:0 30px;
+    display:grid;
+    align-items: center;
+    border:1px solid;
 }
 li{
     list-style: none;
@@ -47,6 +52,7 @@ li{
     font-family: 'Didact Gothic', sans-serif;
     letter-spacing:2px;
     text-align: center;
+    margin-top:-40px;
 }
 .tagline , 
 .name{
