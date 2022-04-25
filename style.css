@@ -5,27 +5,30 @@
 *::after{
     box-sizing: border-box;
 }
-body{
+html{
     padding:0;
     margin:0;
+}
+body{
     color:rgb(48, 45, 25);
     overflow-x: hidden;
+    display: grid;
+    place-content: center;
+    height:100vh;
+    gap:50px;
     font-size:14px;
 }
-
-.home{
-    height:100vh;
-    position:absolute;
+body::before{
+    content:'';
+    height:100%;
+    width:100%;
+    position:fixed;
     top:0;
     left:0;
-    width:100%;
+    z-index:-1;
     background-image: url('bg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: absolute;
-    overflow:hidden;
-    border: 1px solid;
-
 }
 .social-media{
     width:100%;
@@ -45,11 +48,6 @@ nav {
     display:grid;
     align-items: center;
     text-align: center;
-    position:absolute;
-    left:50%;
-    top:50%;
-    margin-right:-50%;
-    transform: translate(-50%,-50%);
 }
 ul{
     padding:0 30px;
@@ -64,14 +62,9 @@ li{
     font-family: 'Didact Gothic', sans-serif;
     letter-spacing:2px;
     text-align: center;
-    position:absolute;
-    left:50%;
-    bottom:10%;
-    margin-right:-50%;
-    transform: translateX(-50%);
-    padding:0 40px;
-}
+    padding:0 20px;
 
+}
 .tagline , 
 .name{
     font-family: 'Lato', sans-serif;
@@ -79,19 +72,9 @@ li{
     letter-spacing:2px;
     text-align: center;
 }
-.tagline{
-    position:absolute;
-    left:50%;
-    top:20%;
-    margin-right:-50%;
-    transform: translateX(-50%);
-}
 .name{
-    position:absolute;
-    left:50%;
-    bottom:20%;
-    margin-right:-50%;
-    transform: translateX(-50%);
+    display:grid;
+    gap:32px;
 }
 .name::after{
     content:'';
@@ -100,7 +83,7 @@ li{
     left:50%;
     margin-right: -50%;
     transform: translateX(-50%);
-    margin-top:10px;
+    margin-top:30px;
     background-color: rgba(48, 45, 25);
     height:1px;
     width:75px;
