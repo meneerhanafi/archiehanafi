@@ -30,6 +30,7 @@ body{
     background-image: url('bg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: absolute;
     gap:50px;
     overflow:hidden;
 }
