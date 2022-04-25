@@ -31,9 +31,7 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     z-index:-1;
-    animation:slidein 0.75s ease-in;
-    animation-fill-mode: both;
-    transition:  300ms cubic-bezier(.5, 0, .5, 1);
+    animation:slidein 1s ease-in;
 }
 @keyframes slidein {
     from{opacity:0;
@@ -50,7 +48,7 @@ body{
     margin-right: -50%;
     text-align: center;
     animation: fadesocialmedia 2s;
-    animation-delay: 1s;
+    animation-delay: 1.25s;
     animation-fill-mode: both;
 }
 @keyframes fadesocialmedia {
@@ -65,7 +63,7 @@ body{
 
 .content{
     animation: fadecontent 2s;
-    animation-delay: 0.75s;
+    animation-delay: 1s;
     animation-fill-mode: both;
 }
 @keyframes fadecontent {
