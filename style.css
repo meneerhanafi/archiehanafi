@@ -31,13 +31,14 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     z-index:-1;
-    animation:slidein 1s ease-in;
+    animation:slidein 1.5s;
+    animation-timing-function: cubic-bezier(1,0.1,0.5,1);
 }
 @keyframes slidein {
-    from{opacity:0;
+    from{
         transform: translateY(-100%)}
     to{
-        opacity:1;
+        
         transform: translateY(0);}
 }
 .social-media{
@@ -48,7 +49,7 @@ body{
     margin-right: -50%;
     text-align: center;
     animation: fadesocialmedia 2s;
-    animation-delay: 1.25s;
+    animation-delay: 1.5s;
     animation-fill-mode: both;
 }
 @keyframes fadesocialmedia {
@@ -63,7 +64,7 @@ body{
 
 .content{
     animation: fadecontent 2s;
-    animation-delay: 1s;
+    animation-delay: 1.25s;
     animation-fill-mode: both;
 }
 @keyframes fadecontent {
@@ -84,6 +85,10 @@ nav {
     text-align: center;
     margin:32px 0;
     padding:0 24px;
+}
+nav a{
+    text-decoration: none;
+    color:rgba(48, 45, 25);
 }
 nav a:hover{
     font-style: italic;
