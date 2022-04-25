@@ -8,6 +8,7 @@
 html{
     padding:0;
     margin:0;
+    background-color: rgba(48, 45, 25, 0.216);
 }
 body{
     display:grid;
@@ -16,22 +17,59 @@ body{
     height:100vh;
     overflow:hidden;
     color:rgb(48, 45, 25);
-    background-image: url('bg.jpg');
-    background-size:cover;
-    background-repeat:no-repeat;
-    background-position:center;
     font-size:14px;
+}
+.bg{
+    content:'';
+    position:absolute;
+    height:100vh;
+    width:100%;
+    top:0;
+    left:0;
+    background-image: url('bg.jpg');
+    background-position:center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index:-1;
+    animation:slidein 1s ease-in;
+    animation-fill-mode: both;
+}
+@keyframes slidein {
+    from{opacity:0;
+        transform: translateY(-100%)}
+    to{
+        opacity:1;
+        transform: translateY(0);}
 }
 .social-media{
     gap:20px;
-    position:absolute;
+    position: absolute;
     top:5%;
     left:50%;
-    margin-right:-50%;
-    transform: translateX(-50%);
+    margin-right: -50%;
+    text-align: center;
+    animation: fadesocialmedia 2s;
+    animation-delay: 1.5s;
+    animation-fill-mode: both;
+}
+@keyframes fadesocialmedia {
+    from {opacity: 0;
+    transform: translate(-50%,100%)}
+    to {opacity:1;
+    transform: translate(-50%,0)}
 }
 .social-media img{
     width:20px;
+}
+
+.content{
+    animation: fadecontent 2s;
+    animation-delay: 1s;
+    animation-fill-mode: both;
+}
+@keyframes fadecontent {
+    from {opacity: 0;}
+    to {opacity:1}
 }
 .tagline {
     font-family: 'Lato', sans-serif;
@@ -46,6 +84,14 @@ nav {
     display:grid;
     text-align: center;
     margin:32px 0;
+
+}
+nav a:hover{
+    font-style: italic;
+    background-color:rgba(48, 45, 25);
+    color:white;
+    transition:  300ms cubic-bezier(.5, 0, .5, 1);
+
 }
 .name{
     font-family: 'Lato', sans-serif;
@@ -74,86 +120,15 @@ nav {
     letter-spacing:2px;
     text-align: center;
     padding:0 20px;
+}
+@media(min-width:1280px){
+    body{
+        font-size:16px;
+    }
+    nav{
+        font-size:92px;
+    }
 
-}
+    
 
-/*
-body{
-    color:rgb(48, 45, 25);
-    overflow: hidden;
-    display: grid;
-    place-content: center;
-    height:100vh;
-    gap:50px;
-    font-size:14px;
-}
-body::before{
-    content:'';
-    height:100%;
-    width:100%;
-    position:fixed;
-    top:0;
-    left:0;
-    z-index:-1;
-    background-image: url('bg.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.social-media{
-    width:100%;
-    position:absolute;
-    top:4%;
-    display: flex;
-    justify-content: center;
-    gap:20px;
-}
-.social-media img{
-    width:20px;
-}
-nav {
-    font-family: 'Poiret One', cursive;
-    font-size:60px;
-    padding:0 20px;
-    display:grid;
-    align-items: center;
-    text-align: center;
-}
-ul{
-    padding:0 30px;
-    display:grid;
-    align-items: center;
-    border:1px solid;
-}
-li{
-    list-style: none;
-}
-.address{
-    font-family: 'Didact Gothic', sans-serif;
-    letter-spacing:2px;
-    text-align: center;
-    padding:0 20px;
-
-}
-.tagline , 
-.name{
-    font-family: 'Lato', sans-serif;
-    font-weight: 700;
-    letter-spacing:2px;
-    text-align: center;
-}
-.name{
-    display:grid;
-    gap:32px;
-}
-.name::after{
-    content:'';
-    position: absolute;
-    display:block;
-    left:50%;
-    margin-right: -50%;
-    transform: translateX(-50%);
-    margin-top:30px;
-    background-color: rgba(48, 45, 25);
-    height:1px;
-    width:75px;
 }
