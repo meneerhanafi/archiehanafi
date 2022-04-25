@@ -12,22 +12,14 @@ html{
 body{
     display:grid;
     place-content: center;
+    justify-content: center;
     height:100vh;
     overflow:hidden;
     color:rgb(48, 45, 25);
-    position:fixed;
-}
-body::before{
-    content:'';
-    height:100%;
-    width:100%;
-    position:fixed;
-    top:0;
-    left:0;
-    z-index:-1;
     background-image: url('bg.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center;
 }
 .social-media{
     gap:20px;
