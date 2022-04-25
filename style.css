@@ -20,6 +20,7 @@ body{
     background-size:cover;
     background-repeat:no-repeat;
     background-position:center;
+    font-size:14px;
 }
 .social-media{
     gap:20px;
@@ -37,7 +38,7 @@ body{
     font-weight: 700;
     letter-spacing:2px;
     text-align: center;
-
+    padding:0 10px;
 }
 nav {
     font-family: 'Poiret One', cursive;
