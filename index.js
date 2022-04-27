@@ -1,3 +1,13 @@
+
+
+
+
+
+
+
+
+
+/*CURSOR*/
 var cursor = {
     delay: 4,
     _x: 0,

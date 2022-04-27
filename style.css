@@ -1,8 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Lato:wght@400;700&family=Poiret+One&display=swap');
 
+
+
 :root {
+    --text-drop:#d5cfc6;
     --text-color:rgba(48, 45, 25);
-    --cursor:#db5461;
+    --cursor:rgba(48, 45, 25, 0.418);
 }
 *,
 *::before,
@@ -12,7 +15,7 @@
 html{
     padding:0;
     margin:0;
-    background-color: rgb(55, 54, 46);
+    background-color: rgb(28, 28, 24);
 }
 body{
     display:grid;
@@ -21,8 +24,81 @@ body{
     height:100vh;
     overflow:hidden;
     color:rgb(48, 45, 25);
-    font-size:14px;
+    font-size:10px;
 }
+.welcome{
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin-right:-50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+/*ARCHIE HANAFI*/
+#text-drop {
+    display: flex;
+    font-family: 'Poiret One', cursive;
+    font-size:50px;
+    color:var(--text-drop); 
+
+}
+.down {
+    opacity:0;
+    animation: dropdown 2s ease-out;
+}
+.up {
+    opacity:0;
+    animation: dropup 2s ease-out;
+}
+.hidden{
+    visibility:hidden;
+}
+@keyframes dropdown {
+    0% {transform: translateY(-100%);  opacity: 0;}
+    50% {transform: translateY(-50%);  opacity: 1;}
+    75% {transform: translateY(-50%);  opacity: 1;}
+    100% {transform: translateY(0%);  opacity: 0;}
+}
+@keyframes dropup {
+    0% {transform: translateY(0);  opacity: 0;}
+    50% {transform: translateY(-50%);  opacity: 1;}
+    75% {transform: translateY(-50%);  opacity: 1;}
+    100% {transform: translateY(0%);  opacity: 0;}
+}
+/*TAGLINE*/
+.welcome-tagline-top{
+    height:1px;
+    width:100%;
+    background-color: var(--text-drop);
+    animation: welcome 2.5s ease;
+    animation-fill-mode: both;
+    position: absolute;
+    top:-100%;
+    left:50%;
+    margin-right:-50%;
+    transform: translateX(-50%);
+}
+.welcome-tagline-bottom{
+    height:1px;
+    width:100%;
+    background-color: var(--text-drop);
+    animation: welcome 2.5s ease;
+    animation-fill-mode: both;
+    position: absolute;
+    left:50%;
+    margin-right:-50%;
+    transform: translateX(-50%);
+}
+@keyframes welcome{
+  0% {transform: translateX(-100%) ; opacity: 0;}
+  25% {transform: translateX(-100%) ; opacity: 0;}
+  50% {transform: translateX(-50%) ; opacity: 0.25;}
+  60% {transform: translateX(-50%) ; opacity: 0.5;}
+  65% {transform: translateX(-50%) ; opacity: 0.75;}
+  75% {transform: translateX(-50%) ; opacity: 1;}
+  100% {transform: translate(0%,50%); opacity: 0;}
+}
+/*BACKGROUND*/
 .bg{
     content:'';
     position:absolute;
@@ -35,15 +111,19 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     z-index:-1;
-    animation:slidein 1s;
+    animation:slidein 1s both;
     animation-timing-function: cubic-bezier(1,0.1,0.5,1);
+    animation-delay: 1.5s;
 }
 @keyframes slidein {
     from{
-        opacity:0}
+        opacity:0;
+    transform:translateY(100%)}
     to{
-        opacity:1;}
+        opacity:1;
+        transform:translateY(0)}
 }
+
 .cursor-dot,
 .cursor-dot-outline {
     pointer-events: none;
@@ -57,16 +137,15 @@ body{
                 transform 0.3s ease-in-out;
 }
 .cursor-dot {
-  width:10px;
-  height:10px;
+  width:1px;
+  height:1px;
   background-color: var(--cursor);
 }
 
 .cursor-dot-outline {
-    width: 40px;
-    height: 40px;
-    background-color:none;
-    border:1px solid var(--cursor);
+    width: 25px;
+    height: 25px;
+    background-color:var(--cursor);
 }
 .social-media{
     gap:20px;
@@ -76,8 +155,9 @@ body{
     margin-right: -50%;
     text-align: center;
     animation: fadesocialmedia 0.5s;
-    animation-delay: 1s;
+    animation-delay: 2.25s;
     animation-fill-mode: both;
+
 }
 @keyframes fadesocialmedia {
     from {opacity: 0;
@@ -90,16 +170,15 @@ body{
 }
 
 .content{
-    animation: fadecontent 0.85s;
-    animation-delay: 0.65s;
+    animation: fadecontent 2s ease;
+    animation-delay: 2.2s;
     animation-fill-mode: both;
+
 }
 @keyframes fadecontent {
-    from {opacity: 0;
-        transform:translateY(50%);    
+    from {opacity: 0;   
     }
     to {opacity:1;
-        transform:translateY(0%) 
     }
 }
 .tagline {
@@ -158,11 +237,14 @@ nav a:hover{
 }
 @media(min-width:1280px){
     body{
-        font-size:16px;
+        font-size:14px;
     }
     nav{
-        font-size:92px;
+        font-size:80px;
+        padding:0;
+
     }
+
 
     
 
