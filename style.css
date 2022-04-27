@@ -44,11 +44,15 @@ body{
 }
 .down {
     opacity:0;
-    animation: dropdown 2s ease-out;
+    animation: dropdown 2s;
+    -webkit-animation-timing-function: linear; /* Chrome, Safari, Opera */
+    animation-timing-function: linear;
 }
 .up {
     opacity:0;
-    animation: dropup 2s ease-out;
+    animation: dropup 2s;
+    -webkit-animation-timing-function: linear; /* Chrome, Safari, Opera */
+    animation-timing-function: linear;
 }
 .hidden{
     visibility:hidden;
@@ -70,8 +74,10 @@ body{
     height:1px;
     width:100%;
     background-color: var(--text-drop);
-    animation: welcome 2.5s ease;
+    animation: welcome 2.5s;
     animation-fill-mode: both;
+    -webkit-animation-timing-function: linear; /* Chrome, Safari, Opera */
+    animation-timing-function: linear;
     position: absolute;
     top:-100%;
     left:50%;
@@ -82,7 +88,9 @@ body{
     height:1px;
     width:100%;
     background-color: var(--text-drop);
-    animation: welcome 2.5s ease;
+    animation: welcome 2.5s;
+    -webkit-animation-timing-function: linear; /* Chrome, Safari, Opera */
+    animation-timing-function: linear;
     animation-fill-mode: both;
     position: absolute;
     left:50%;
@@ -114,6 +122,7 @@ body{
     animation:slidein 1s both;
     animation-timing-function: cubic-bezier(1,0.1,0.5,1);
     animation-delay: 1.5s;
+
 }
 @keyframes slidein {
     from{
@@ -157,6 +166,8 @@ body{
     animation: fadesocialmedia 0.5s;
     animation-delay: 2.25s;
     animation-fill-mode: both;
+    -webkit-animation-timing-function: linear; /* Chrome, Safari, Opera */
+    animation-timing-function: linear;
 
 }
 @keyframes fadesocialmedia {
@@ -170,10 +181,11 @@ body{
 }
 
 .content{
-    animation: fadecontent 2s ease;
+    animation: fadecontent 2s;
     animation-delay: 2.2s;
     animation-fill-mode: both;
-
+    -webkit-animation-timing-function: linear; /* Chrome, Safari, Opera */
+    animation-timing-function: linear;
 }
 @keyframes fadecontent {
     from {opacity: 0;   
