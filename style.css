@@ -242,7 +242,9 @@ nav a:hover{
     nav{
         font-size:80px;
         padding:0;
-
+    }
+    .down, .up{
+        font-size:80px;
     }
 
 
